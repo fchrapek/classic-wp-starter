@@ -1,0 +1,23 @@
+.hero {
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+
+  @include up(md) {
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+  }
+
+  &__container {
+    display: grid;
+    gap: 3.2rem;
+
+    @include up(md) {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+
+    @include up(lg) {
+      gap: 8rem;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+// stylelint-disable
+@mixin variablefont($family, $src, $weight: normal, $style: normal) {
+  @font-face {
+    // @link https://css-tricks.com/almanac/properties/f/font-display/
+    font-display: swap;
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    src: url('#{$src}.ttf') format("truetype-variations");
+  }
+}
+
+@mixin up($up-breakpoint, $up-breakpoints: $breakpoints) {
+  @if map-has-key($up-breakpoints, $up-breakpoint) {
+    $up-breakpoint: map-get($up-breakpoints, $up-breakpoint);
+  }
+
+  @media (min-width: #{$up-breakpoint + "px"}) {
+    @content;
+  }
+}
+
+@mixin down($down-breakpoint, $down-breakpoints: $breakpoints) {
+  @if map-has-key($down-breakpoints, $down-breakpoint) {
+    $down-breakpoint: map-get($down-breakpoints, $down-breakpoint);
+  }
+
+  @media (max-width: #{$down-breakpoint - 1 + "px"}) {
+    @content;
+  }
+}
+
+@mixin between($lower, $upper) {
+  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+    $lower-breakpoint: map-get($breakpoints, $lower);
+    $upper-breakpoint: map-get($breakpoints, $upper);
+
+    @media (min-width: $lower-breakpoint + "px") and (max-width: ($upper-breakpoint - 1 + "px")) {
+      @content;
+    }
+  }
+
+  @else {
+    @if map-has-key($breakpoints, $lower) == false {
+      @warn "Your lower breakpoint was invalid: #{$lower}.";
+    }
+
+    @if map-has-key($breakpoints, $upper) == false {
+      @warn "Your upper breakpoint was invalid: #{$upper}.";
+    }
+  }
+}
