@@ -1,10 +1,10 @@
 {
-    "key": "group_62cdced6aeca7",
-    "title": "Block: Contact Form",
+    "key": "group_6390ee6892a77",
+    "title": "Block: Services",
     "fields": [
         {
-            "key": "field_63617f86bf283",
-            "label": "Block: Contact Form",
+            "key": "field_6390ee68951ee",
+            "label": "Block: Services",
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -21,7 +21,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_62cdced6b3682",
+            "key": "field_6390ee68951f6",
             "label": "Block: Data",
             "name": "data",
             "aria-label": "",
@@ -37,51 +37,31 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_62cdced6b42bc",
-                    "label": "Contact Form: Header",
-                    "name": "header",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_62cdced6b42c3",
-                    "label": "Contact Form: Form",
-                    "name": "form",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
-                },
-                {
-                    "key": "field_6390ef4a7ca17",
-                    "label": "Contact Form: Content",
+                    "key": "field_6390ee6896781",
+                    "label": "Services: Content",
                     "name": "content",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_6390ee8eb7f52",
+                    "label": "Services: Posts",
+                    "name": "posts",
+                    "aria-label": "",
+                    "type": "post_object",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -90,11 +70,14 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "maxlength": "",
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": ""
+                    "post_type": [
+                        "service"
+                    ],
+                    "taxonomy": "",
+                    "return_format": "id",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 1
                 }
             ]
         }
@@ -104,7 +87,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/contact-form"
+                "value": "acf\/hero"
             }
         ]
     ],
@@ -117,5 +100,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1670442847
+    "modified": 1670442694
 }
