@@ -65,10 +65,6 @@ add_action('after_setup_theme', function () {
         'title'          => 'Hero',
       ],
       [
-        'name'           => 'cards',
-        'title'          => 'Cards',
-      ],
-      [
         'name'           => 'content-image',
         'title'          => 'Content with Image',
       ],
@@ -77,8 +73,12 @@ add_action('after_setup_theme', function () {
         'title'          => 'CTA',
       ],
       [
-        'name'           => 'presentation',
-        'title'          => 'Presentation',
+        'name'           => 'services',
+        'title'          => 'Services',
+      ],
+      [
+        'name'           => 'projects',
+        'title'          => 'Projects',
       ],
       [
         'name'           => 'contact-form',
