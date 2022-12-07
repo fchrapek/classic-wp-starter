@@ -39,7 +39,7 @@ add_action('after_setup_theme', function () {
      */
     'taxonomies' => [
       'project-type' => [
-        'name' => 'Project_Type',
+        'name' => __('Project Type', 'brandpaka'),
         'post_types' => ['project'],
       ],
     ],
@@ -51,7 +51,8 @@ add_action('after_setup_theme', function () {
      * https://github.com/digitoimistodude/brandpaka#custom-post-types
      */
     'post_types' => [
-      'project' => 'Project',
+      'project' => __('Project', 'brandpaka'),
+      'service' => __('Service', 'brandpaka'),
     ],
 
     /**

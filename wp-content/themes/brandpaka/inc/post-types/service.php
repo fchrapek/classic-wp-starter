@@ -5,12 +5,12 @@ namespace Brandpaka;
 /**
  * Registers the Your Post Type post type.
  */
-class Project extends Post_Type //phpcs:ignore
+class Service extends Post_Type //phpcs:ignore
 {
   public function register()
   {
     $generated_labels = [
-      'menu_name'          => __('Projects', 'brandpaka'),
+      'menu_name'          => __('Services', 'brandpaka'),
       'name'               => _x('Your Post Types', 'post type general name', 'brandpaka'),
       'singular_name'      => _x('Your Post Type', 'post type singular name', 'brandpaka'),
       'name_admin_bar'     => _x('Your Post Type', 'add new on admin bar', 'brandpaka'),
@@ -37,7 +37,7 @@ class Project extends Post_Type //phpcs:ignore
       'show_in_rest'        => false,
       'rewrite'             => [
         'with_front'  => false,
-        'slug'        => '[project]',
+        'slug'        => 'service',
       ],
       'supports'            => ['title', 'editor', 'thumbnail', 'revisions'],
       'taxonomies'          => [],
