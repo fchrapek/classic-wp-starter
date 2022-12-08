@@ -10,7 +10,7 @@ $projects = get_posts([
 ]);
 ?>
 
-<section class="projects">
+<section class="projects block">
   <div class="projects__container container">
     <div class="projects__content">
       <?php if (! empty($data["content"])) : ?>
@@ -20,10 +20,10 @@ $projects = get_posts([
 
     <ul class="projects__grid">
       <?php foreach ($projects as $service) : ?>
-        <li class="projects__service">
+        <li class="projects__project">
           <?php if (has_post_thumbnail($service->ID)) : ?>
-            <figure class="projects__service-media">
-              <?php echo get_the_post_thumbnail($service->ID, "large", false, []); ?>
+            <figure class="projects__project-media">
+              <?php echo get_the_post_thumbnail($service->ID, 'large', false, []); ?>
             </figure>
           <?php endif; ?>
         </li>

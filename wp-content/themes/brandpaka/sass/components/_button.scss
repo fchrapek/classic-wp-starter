@@ -2,7 +2,6 @@
   display: block;
   width: auto;
   max-width: max-content;
-  padding: 1.2rem 2.4rem 1.1rem;
   color: var(--c-white);
   font-family: var(--ff-main);
   font-size: 1.4rem;
@@ -10,13 +9,48 @@
   text-align: center;
   text-decoration: none;
   appearance: none;
-  background-color: var(--c-gray-600);
-  border: .1rem solid var(--c-gray-600);
   cursor: pointer;
   overflow: hidden;
 
-  @include up(md) {
-    padding-left: 4rem;
-    padding-right: 4rem;
+  &__inner {
+    position: relative;
+    display: block;
+    padding: 1.2rem 3.6rem 1.1rem;
+    background-color: var(--c-primary);
+    border: .1rem solid var(--c-primary);
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10rem;
+      height: 10rem;
+      background-color: var(--c-white);
+      border: .1rem solid var(--c-primary);
+      transform: rotate(45deg);
+      z-index: 2;
+    }
+
+    &::before {
+      left: -9.5rem;
+      bottom: -5.5rem;
+    }
+
+    &::after {
+      right: -9.5rem;
+      top: -5.5rem;
+    }
+  }
+
+  &.-secondary {
+    .button__inner {
+      background-color: var(--c-white);
+
+      &::after,
+      &::before {
+        background-color: var(--c-primary);
+        border: .1rem solid var(--c-white);
+      }
+    }
   }
 }

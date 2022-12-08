@@ -66,7 +66,7 @@ namespace Brandpaka;
         <a 
           href="mailto:<?php echo esc_url($email); ?>"
           aria-label="<?php echo $email; ?>"
-          class="contact-info__e-mail-link no-external-link-indicator">
+          class="contact-info__e-mail-link">
           <?php echo esc_html($email); ?>
         </a>
       </li>

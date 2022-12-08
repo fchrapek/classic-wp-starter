@@ -1,14 +1,7 @@
 @import "../layout/typography";
 
 .cta {
-  padding-top: 3.2rem;
-  padding-bottom: 3.2rem;
   background-color: var(--c-gray-600);
-
-  @include up(md) {
-    padding-top: 6.4rem;
-    padding-bottom: 6.4rem;
-  }
 
   &__content {
     margin-bottom: 2.4rem;

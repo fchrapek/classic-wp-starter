@@ -1,12 +1,4 @@
 .content-image {
-  padding-top: 3.2rem;
-  padding-bottom: 3.2rem;
-
-  @include up(md) {
-    padding-top: 6.4rem;
-    padding-bottom: 8.8rem;
-  }
-
   &__container {
     display: grid;
     gap: 3.2rem;
@@ -17,7 +9,7 @@
     }
 
     @include up(lg) {
-      gap: 8rem;
+      gap: 16rem;
     }
   }
 
