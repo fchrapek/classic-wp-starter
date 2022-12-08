@@ -10,7 +10,17 @@ $data = get_field('data');
     <div class="content-image__content">
       <?php if (! empty($data['content'])) : ?>
         <?php echo $data['content']; ?>
-      <?php endif; ?> 
+      <?php endif;
+
+      if (! empty($btn = $data['button'])) : ?>
+        <a
+          href="<?php echo esc_url($btn['url']); ?>"
+          target="<?php echo esc_attr($btn['target'] ? $btn['target'] : '_self'); ?>"
+          class="content-image__button js-trigger button">
+
+          <?php echo esc_html($btn['title']); ?>
+        </a>
+      <?php endif; ?>
     </div>
 
     <?php if (! empty($data['image'])) : ?>
