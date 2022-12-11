@@ -1,10 +1,14 @@
+@include fontFace("Eurostile", "../../fonts/Eurostile-Bol", 700);
+@include fontFace("Roboto", "../../fonts/Roboto-Regular", 400);
+@include fontFace("Roboto", "../../fonts/Roboto-Bold", 700);
+
 html {
   font-size: 62.5%;
 }
 
 body {
   color: var(--c-paragraph);
-  font-family: var(--ff-main);
+  font-family: "Roboto", sans-serif;
   font-size: 1.7rem;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -31,8 +35,8 @@ td,
 table,
 tr,
 %default {
-  font-size: 1.7rem;
-  line-height: 2.4rem;
+  font-size: 1.6rem;
+  line-height: 2.3rem;
 
   @include up(lg) {
     font-size: 1.8rem;
@@ -58,20 +62,16 @@ h3,
 h4,
 h5,
 h6 {
+  margin-top: 0;
   color: var(--c-heading);
-  font-family: var(--ff-main);
+  font-family: "Eurostile", sans-serif;
   font-weight: 700;
 }
 
 h1,
 %h1 {
-  font-size: 2.8rem;
-  line-height: 3.4rem;
-
-  @include up(sm) {
-    font-size: 3.6rem;
-    line-height: 4.2rem;
-  }
+  font-size: 4rem;
+  line-height: 4.8rem;
 
   @include up(md) {
     font-size: 4.6rem;
@@ -86,8 +86,8 @@ h1,
 
 h2,
 %h2 {
-  font-size: 2.4rem;
-  line-height: 3.2rem;
+  font-size: 3.2rem;
+  line-height: 4rem;
 
   @include up(md) {
     font-size: 3.2rem;
@@ -98,7 +98,7 @@ h2,
 h3,
 %h3 {
   font-size: 2.4rem;
-  line-height: 3.2rem;
+  line-height: 3rem;
 
   @include up(lg) {
     font-size: 2.8rem;
@@ -129,12 +129,7 @@ h5,
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0;
+h2 {
   margin-bottom: 2.4rem;
 
   @include up(lg) {
@@ -142,9 +137,21 @@ h6 {
   }
 }
 
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1.6rem;
+
+  @include up(lg) {
+    margin-bottom: 2.4rem;
+  }
+}
+
 p {
   margin-top: 0;
   margin-bottom: 2.4rem;
+  color: var(--c-paragraph);
 
   @include up(lg) {
     margin-bottom: 4rem;

@@ -5,6 +5,7 @@
   max-width: var(--width-grid);
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: -4rem;
   background-color: var(--c-white);
   border: 1px solid var(--c-gray-200);
   z-index: 2;
@@ -12,7 +13,6 @@
   @include up(lg) {
     top: -8rem;
   }
-
 
   &__numbers {
     display: grid;
@@ -28,6 +28,7 @@
 
   &__number {
     padding: 4rem;
+    text-align: center;
     border-bottom: .1rem solid var(--c-gray-200);
 
     @include up(md) {
@@ -40,19 +41,16 @@
         border-right: 0;
       }
     }
-  }
-
-  &__number {
-    * {
-      text-align: center;
-    }
 
     &-heading {
       margin-bottom: 0;
+      font-size: 3.2rem;
     }
 
     &-subheading {
       display: block;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
     }
   }
 }

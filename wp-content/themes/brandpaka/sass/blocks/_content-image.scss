@@ -1,7 +1,7 @@
 .content-image {
   &__container {
     display: grid;
-    gap: 3.2rem;
+    gap: 4.8rem;
 
     @include up(md) {
       grid-template-columns: repeat(2, 1fr);

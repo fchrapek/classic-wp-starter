@@ -12,6 +12,7 @@
     a {
       @extend %h1;
       color: var(--c-white);
+      font-family: "Eurostile", sans-serif;
       font-weight: 700;
       text-align: center;
     }

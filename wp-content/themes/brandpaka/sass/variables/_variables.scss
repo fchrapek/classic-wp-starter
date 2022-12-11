@@ -1,5 +1,6 @@
 // For AAA: https://www.color-blindness.com/color-name-hue/
 // For AA: https://chir.ag/projects/name-that-color/
+
 :root {
   // Layout
   --width-grid: 120rem;
@@ -19,21 +20,6 @@
   --c-gray-700: #374151;
   --c-red-400: #c70028;
   --c-primary: var(--c-darkblue);
-
-  // Font family
-  --ff-main: "Roboto", sans-serif;
-  --ff-heading: var(--ff-main);
+  --c-heading: var(--c-black);
+  --c-paragraph: var(--c-gray-600);
 }
-
-// TO-DO Fix fonts
-
-// @include variablefont("Roboto", "../../fonts/roboto-variablefont", 1 999);
-
-// @font-face {
-//   font-family: "Roboto Flex";
-//   font-stretch: 25% 151%;
-//   font-weight: 100 1000;
-//   src:
-//     url("../../fonts/RobotoFlex-VF.woff2") format("woff2") tech("variations"),
-//     url("../../fonts/RobotoFlex-VF.woff2") format("woff2-variations");
-// }
