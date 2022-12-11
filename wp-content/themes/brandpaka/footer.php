@@ -9,6 +9,8 @@ $data = get_field('contact_info', 'options');
 
 <footer id="colophon" class="site-footer">
   <div class="site-footer__container container">
+    CAD Line ©
+    <?php echo date("Y"); ?>
     <?php get_template_part('template-parts/components/contact-info', null, ["class" => ""]); ?>
   </div>
 </footer>

@@ -36,6 +36,10 @@
       border-bottom: 0;
     }
 
+    @include up(lg) {
+      padding: 6rem;
+    }
+
     &:last-of-type {
       @include up(md) {
         border-right: 0;
@@ -45,6 +49,10 @@
     &-heading {
       margin-bottom: 0;
       font-size: 3.2rem;
+
+      @include up(lg) {
+        font-size: 4.6rem;
+      }
     }
 
     &-subheading {

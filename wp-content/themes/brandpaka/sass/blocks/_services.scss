@@ -35,5 +35,14 @@
     @include up(lg) {
       padding: 6.4rem;
     }
+
+    &-media {
+      margin-bottom: 2.4rem;
+
+      img {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+    }
   }
 }

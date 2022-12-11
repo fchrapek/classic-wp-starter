@@ -17,7 +17,7 @@ namespace Brandpaka;
         <a 
           href="tel:<?php echo esc_url($phone); ?>"
           aria-label="<?php echo $phone; ?>"
-          class="contact-info__item -phone-link">
+          class="contact-info__phone-link">
           
           <?php if (! empty($phone_formatted = $contact_info["phone_formatted"])) :
             echo esc_html($phone_formatted);
@@ -33,7 +33,7 @@ namespace Brandpaka;
         <a 
           href="mailto:<?php echo esc_url($email); ?>"
           aria-label="<?php echo $email; ?>"
-          class="contact-info__item -e-mail-link">
+          class="contact-info__e-mail-link">
           <?php echo esc_html($email); ?>
         </a>
       </li>

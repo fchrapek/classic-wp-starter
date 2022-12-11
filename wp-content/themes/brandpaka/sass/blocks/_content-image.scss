@@ -18,4 +18,8 @@
       order: 1;
     }
   }
+
+  &__media {
+    border: .1rem solid var(--c-gray-200);
+  }
 }
