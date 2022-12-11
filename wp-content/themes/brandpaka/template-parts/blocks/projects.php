@@ -10,7 +10,7 @@ $projects = get_posts([
 ]);
 ?>
 
-<section class="projects block">
+<section id="projects" class="projects block">
   <div class="projects__container container">
     <div class="projects__content">
       <?php if (! empty($data["content"])) : ?>

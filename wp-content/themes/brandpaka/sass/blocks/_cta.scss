@@ -1,7 +1,7 @@
 @import "../layout/typography";
 
 .cta {
-  background-color: var(--c-gray-600);
+  background-color: var(--c-primary);
 
   &__content {
     margin-bottom: 2.4rem;
@@ -11,6 +11,7 @@
     p,
     a {
       @extend %h1;
+      color: var(--c-white);
       font-weight: 700;
       text-align: center;
     }

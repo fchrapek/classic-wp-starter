@@ -1,28 +1,24 @@
 <?php
 
-/**
- * Gather all bits and pieces together.
- * If you end up having multiple post types, taxonomies,
- * hooks and functions - please split those to their
- * own files under /inc and just require here.
- */
-
 namespace Brandpaka;
 
-/**
- * The current version of the theme.
- */
 define('BRPK_VERSION', '1.0.0');
 
-/**
- * Theme settings
- */
 add_action('after_setup_theme', function () {
   $theme_settings = [
-    /**
-     * Theme textdomain
-     */
     'textdomain' => 'brandpaka',
+
+    /**
+     * Custom setting group settings when using Air setting groups plugin.
+     * On multilingual sites using Polylang, translations are handled automatically.
+     */
+    'custom_settings' => [
+      // 'your-custom-setting' => [
+      //   'id' => Your custom setting post id,
+      //   'title' => 'Your custom setting',
+      //   'block-editor' => true,
+      //  ],
+    ],
 
     /**
      * Menu locations
@@ -38,10 +34,10 @@ add_action('after_setup_theme', function () {
      * https://github.com/digitoimistodude/brandpaka#custom-taxonomies
      */
     'taxonomies' => [
-      'project-type' => [
-        'name' => __('Project Type', 'brandpaka'),
-        'post_types' => ['project'],
-      ],
+      // 'your-taxonomy' => [
+      //   'name' => 'Your_Taxonomy',
+      //   'post_types' => [ 'post', 'page' ],
+      // ],
     ],
 
     /**
@@ -65,8 +61,12 @@ add_action('after_setup_theme', function () {
         'title'          => 'Hero',
       ],
       [
+        'name'           => 'big-numbers',
+        'title'          => 'Big numbers',
+      ],
+      [
         'name'           => 'content-image',
-        'title'          => 'Content with Image',
+        'title'          => 'Content with image',
       ],
       [
         'name'           => 'cta',
@@ -82,8 +82,9 @@ add_action('after_setup_theme', function () {
       ],
       [
         'name'           => 'contact-form',
-        'title'          => 'Contact Form',
+        'title'          => 'Contact form',
       ],
+
       // [
       //   'name'           => 'block-file-slug',
       //   'title'          => 'Block Visible Name',
@@ -157,6 +158,9 @@ add_action('after_setup_theme', function () {
 
     // If you want to use classic editor somewhere, define it here
     'use_classic_editor' => [],
+
+    // Add your own settings and use them wherever you need, for example THEME_SETTINGS['my_custom_setting']
+    'my_custom_setting' => true,
   ];
 
   $theme_settings = apply_filters('brandpaka_theme_settings', $theme_settings);

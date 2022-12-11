@@ -27,7 +27,7 @@ $data = get_field('data');
 
     <?php if (! empty($data['image'])) : ?>
       <figure class="hero__media">
-        <?php echo wp_get_attachment_image($data['image'], 'full', false, ['class' => 'hero__media-img']); ?>
+        <?php echo wp_get_attachment_image($data['image'], 'full', false, []); ?>
       </figure>
     <?php endif; ?>
   </div>

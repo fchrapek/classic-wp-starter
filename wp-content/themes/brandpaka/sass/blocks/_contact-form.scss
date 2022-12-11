@@ -1,9 +1,8 @@
 .contact-form {
-  *:not(a) {
-    display: block;
-  }
+  background-color: var(--c-gray-200);
 
   label {
+    display: block;
     margin-bottom: .4rem;
     font-size: 1.2rem;
     font-weight: 700;
@@ -17,6 +16,7 @@
     width: 100%;
     margin-bottom: 1.1rem;
     padding: 1rem;
+    border: .1rem solid var(--c-gray-300);
 
     @include up(lg) {
       padding: 2rem;
@@ -46,5 +46,16 @@
 
   .wpcf7-spinner {
     display: none;
+  }
+
+  &__container {
+    @include up(md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__heading {
+    grid-column: -1 / 1;
   }
 }

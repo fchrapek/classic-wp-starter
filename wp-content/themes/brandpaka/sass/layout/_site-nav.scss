@@ -6,7 +6,7 @@
   width: 100vw;
   height: 100vh;
   place-content: center;
-  background-color: var(--c-gray-200);
+  background-color: var(--c-primary);
   transform: translateX(100%);
   transition: transform .25s ease-in-out;
   z-index: 98;
@@ -42,16 +42,25 @@
       padding: 1rem;
       text-align: right;
 
+      @include up(lg) {
+        padding: 0 2.4rem;
+      }
+
       &:last-of-type {
         @include up(lg) {
           padding-right: 0;
         }
       }
 
+      a,
+      span {
+        color: var(--c-white);
+      }
+
       &.current-menu-item {
         a,
         span {
-          color: var(--c-gray-700);
+          color: var(--c-white);
         }
       }
     }
