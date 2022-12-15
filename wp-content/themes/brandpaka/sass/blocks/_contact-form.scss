@@ -83,6 +83,12 @@
       font-size: 2.2rem;
       line-height: 2.6rem;
 
+      @include up(lg) {
+        padding-left: 5.6rem;
+        font-size: 3rem;
+        line-height: 3.6rem;
+      }
+
       &::before {
         content: "";
         position: absolute;
@@ -90,7 +96,27 @@
         top: -.9rem;
         width: 4rem;
         height: 4rem;
-        background: url("../../svg/placeholder.svg") no-repeat 50% / contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      &.-phone {
+        &::before {
+          background-image: url("../../svg/phone.svg");
+        }
+      }
+
+      &.-email {
+        &::before {
+          background-image: url("../../svg/email.svg");
+        }
+      }
+
+      &.-address {
+        &::before {
+          background-image: url("../../svg/pin.svg");
+        }
       }
     }
   }
