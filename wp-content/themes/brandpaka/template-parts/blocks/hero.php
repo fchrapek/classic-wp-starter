@@ -17,10 +17,8 @@ $data = get_field('data');
           href="<?php echo esc_url($btn['url']); ?>"
           target="<?php echo esc_attr($btn['target'] ? $btn['target'] : '_self'); ?>"
           class="hero__button js-trigger button">
-
-          <span class="button__inner">
-            <?php echo esc_html($btn['title']); ?>            
-          </span>
+          
+          <?php echo esc_html($btn['title']); ?>            
         </a>
       <?php endif; ?>
     </div>

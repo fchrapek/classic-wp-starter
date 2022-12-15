@@ -20,6 +20,12 @@
   }
 
   &__media {
+    height: 100%;
     border: .1rem solid var(--c-gray-200);
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }

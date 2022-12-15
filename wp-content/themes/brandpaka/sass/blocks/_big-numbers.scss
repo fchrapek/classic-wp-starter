@@ -1,4 +1,6 @@
 .big-numbers {
+  --edge-size: 4.8rem;
+
   position: relative;
   top: -4rem;
   width: 90%;
@@ -6,12 +8,49 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: -4rem;
+  padding: 0;
+  clip-path:
+    polygon(
+      var(--edge-size) 0%,
+      100% 0,
+      100% calc(100% - var(--edge-size)),
+      calc(100% - var(--edge-size)) 100%,
+      0 100%,
+      0% var(--edge-size)
+    );
   background-color: var(--c-white);
-  border: 1px solid var(--c-gray-200);
   z-index: 2;
 
   @include up(lg) {
     top: -8rem;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+
+  &::before {
+    background-color: var(--c-gray-200);
+    z-index: -2;
+  }
+
+  &::after {
+    --border-width: .1rem;
+
+    clip-path:
+      polygon(
+        var(--border-width) var(--edge-size),
+        var(--edge-size) var(--border-width),
+        calc(100% - var(--border-width)) var(--border-width),
+        calc(100% - var(--border-width)) calc(100% - var(--border-width) - var(--edge-size)),
+        calc(100% - var(--border-width) - var(--edge-size)) calc(100% - var(--border-width)),
+        var(--border-width)  calc(100% - var(--border-width))
+      );
+    background-color: var(--c-white);
+    z-index: -1;
   }
 
   &__numbers {
@@ -57,7 +96,10 @@
 
     &-subheading {
       display: block;
+      margin-top: 1rem;
+      font-size: 2rem;
       font-weight: 400;
+      line-height: 2.4rem;
     }
   }
 }
