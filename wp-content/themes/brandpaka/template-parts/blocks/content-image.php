@@ -5,7 +5,7 @@ namespace Brandpaka;
 $data = get_field('data');
 ?>
 
-<section class="content-image block">
+<section class="block content-image">
   <div class="content-image__container container">
     <div class="content-image__content">
       <?php if (! empty($data['content'])) : ?>

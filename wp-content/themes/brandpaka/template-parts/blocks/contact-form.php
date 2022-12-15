@@ -5,7 +5,7 @@ namespace Brandpaka;
 $data = get_field("data");
 ?>
 
-<section class="contact-form block">
+<section class="block contact-form">
   <div class="contact-form__container container">
     <?php if (! empty($data['header'])) : ?>
       <h2 class="contact-form__heading">

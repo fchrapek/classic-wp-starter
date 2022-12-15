@@ -5,7 +5,7 @@ namespace Brandpaka;
 $data = get_field('data');
 ?>
 
-<section class="cta block">
+<section class="block cta">
   <div class="cta__container container">
     <?php if (! empty($data['content'])) : ?>
       <div class="cta__content">

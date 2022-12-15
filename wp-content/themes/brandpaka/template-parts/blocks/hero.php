@@ -5,7 +5,7 @@ namespace Brandpaka;
 $data = get_field('data');
 ?>
 
-<section class="hero block">
+<section class="block hero">
   <div class="hero__container container">
     <div class="hero__content">
       <?php if (! empty($data['content'])) : ?>

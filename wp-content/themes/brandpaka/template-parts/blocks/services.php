@@ -10,7 +10,7 @@ $services = get_posts([
 ]);
 ?>
 
-<section class="services block">
+<section class="block services">
   <div class="services__container container">
     <div class="services__content">
       <?php if (! empty($data["content"])) : ?>

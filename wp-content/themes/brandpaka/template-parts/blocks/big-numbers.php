@@ -5,7 +5,7 @@ namespace Brandpaka;
 $data = get_field('data');
 ?>
 
-<section class="big-numbers">
+<section class="block big-numbers">
   <div class="big-numbers__container container">
     <?php if (! empty($data['big_numbers'])) : ?>
       <ul class="big-numbers__numbers">
