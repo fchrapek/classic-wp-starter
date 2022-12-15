@@ -1,6 +1,10 @@
 // For AAA: https://www.color-blindness.com/color-name-hue/
 // For AA: https://chir.ag/projects/name-that-color/
 
+@include font("Eurostile", "../../fonts/Eurostile-Bol", 700);
+@include font("Roboto", "../../fonts/Roboto-Regular", 400);
+@include font("Roboto", "../../fonts/Roboto-Bold", 700);
+
 :root {
   // Layout
   --width-grid: 120rem;
@@ -22,4 +26,8 @@
   --c-primary: var(--c-darkblue);
   --c-heading: var(--c-black);
   --c-paragraph: var(--c-gray-600);
+
+  // Fonts
+  --ff-main: "Roboto", sans-serif;
+  --ff-heading: "Eurostile", sans-serif;
 }

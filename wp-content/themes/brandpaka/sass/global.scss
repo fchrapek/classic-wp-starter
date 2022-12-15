@@ -7,11 +7,11 @@
 
 // Helpers
 @import
-  "helpers/mixins";
+  "helpers/mixins",
+  "helpers/sanitize";
 
 // Variables
 @import
-  "variables/normalize",
   "variables/breakpoints",
   "variables/variables";
 

@@ -1,76 +1,35 @@
-@include fontFace("Eurostile", "../../fonts/Eurostile-Bol", 700);
-@include fontFace("Roboto", "../../fonts/Roboto-Regular", 400);
-@include fontFace("Roboto", "../../fonts/Roboto-Bold", 700);
-
-html {
+:root {
   font-size: 62.5%;
 }
 
 body {
-  color: var(--c-paragraph);
-  font-family: "Roboto", sans-serif;
+  color: var(--c-black);
+  font-family: var(--ff-main);
   font-size: 1.7rem;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  line-height: 2.8rem;
   text-rendering: geometricprecision;
-}
-
-p,
-span,
-dd,
-dt,
-figcaption,
-hr,
-small,
-ol,
-ul,
-li,
-blockquote,
-kbd,
-pre,
-samp,
-code,
-th,
-td,
-table,
-tr,
-%default {
-  font-size: 1.6rem;
-  line-height: 2.3rem;
-
-  @include up(lg) {
-    font-size: 1.8rem;
-    line-height: 2.8rem;
-  }
-}
-
-input,
-textarea {
-  font-family: "Roboto", sans-serif;
 }
 
 a {
   color: var(--c-primary);
   text-decoration: none;
-  transition: color .25s;
+  transition: opacity .25s;
 
   &:hover,
   &:focus {
-    color: var(--c-primary);
+    opacity: .8;
   }
 }
 
-// Heading defaults
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  margin-top: 0;
-  color: var(--c-heading);
-  font-family: "Eurostile", sans-serif;
-  font-weight: 700;
+  font-family: var(--ff-heading);
 }
 
 h1,
