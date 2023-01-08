@@ -6,6 +6,7 @@
 
 # Configuration
 wp-config-db.php
+wp-config.php
 
 # Example themes
 /wp-content/themes/brandpaka/move_out.sh
@@ -28,6 +29,9 @@ wp-config-db.php
 
 # Example plugin
 /wp-content/plugins/hello.php
+/wp-content/plugins/wp-migrate-db-pro/
+/wp-content/plugins/wp-migrate-db-pro-media-files/
+/wp-content/plugins/wp-migrate-db-pro-theme-plugin-files/
 
 # Uploads
 /wp-content/uploads/
