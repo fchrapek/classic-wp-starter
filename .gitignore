@@ -28,6 +28,9 @@ wp-config-db.php
 /wp-content/plugins/wp-migrate-db-pro
 /wp-content/plugins/wp-migrate-db-pro-media-files
 /wp-content/plugins/wp-migrate-db-pro-theme-plugin-files
+/wp-content/plugins/sitepress-multilingual-cms
+/wp-content/plugins/wpml-media-translation
+/wp-content/plugins/wpml-string-translation
 
 # Uploads
 /wp-content/uploads/
