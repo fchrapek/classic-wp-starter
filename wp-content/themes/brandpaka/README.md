@@ -1,1 +1,0 @@
-## A minimalist WordPress starter theme based on air-light theme.
