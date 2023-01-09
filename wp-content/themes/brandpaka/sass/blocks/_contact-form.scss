@@ -1,0 +1,123 @@
+.contact-form {
+  background-color: var(--c-gray-200);
+
+  label {
+    display: block;
+    margin-bottom: .4rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    margin-bottom: 1.1rem;
+    padding: 1rem;
+    border: .1rem solid var(--c-gray-300);
+
+    @include up(lg) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__input {
+    margin-bottom: 1rem;
+  }
+
+  .wpcf7-spinner {
+    display: none;
+  }
+
+  .wpcf7-not-valid-tip {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+
+  &__container {
+    display: grid;
+
+    @include up(md) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 4rem;
+    }
+
+    @include up(lg) {
+      grid-column-gap: 8rem;
+    }
+  }
+
+  &__heading {
+    grid-column: -1 / 1;
+  }
+
+  .form {
+    &__field {
+      &.-privacy-info {
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .contact-info {
+    margin: 0;
+    margin-top: 4rem;
+    padding: 0;
+    list-style-type: none;
+
+    @include up(md) {
+      margin-top: 0;
+    }
+
+    &__item {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 5rem;
+      color: var(--c-black);
+      font-family: "Eurostile", sans-serif;
+      font-size: 2.2rem;
+      line-height: 2.6rem;
+
+      @include up(lg) {
+        padding-left: 5.6rem;
+        font-size: 3rem;
+        line-height: 3.6rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -.9rem;
+        width: 4rem;
+        height: 4rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      &.-phone {
+        &::before {
+          background-image: url("../../svg/phone.svg");
+        }
+      }
+
+      &.-email {
+        &::before {
+          background-image: url("../../svg/email.svg");
+        }
+      }
+
+      &.-address {
+        &::before {
+          background-image: url("../../svg/pin.svg");
+        }
+      }
+    }
+  }
+}

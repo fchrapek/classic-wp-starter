@@ -1,0 +1,24 @@
+@import "../layout/typography";
+
+.cta {
+  background-color: var(--c-primary);
+
+  &__content {
+    margin-bottom: 2.4rem;
+
+    h1,
+    h2,
+    p,
+    a {
+      @extend %h2;
+      color: var(--c-white);
+      font-family: "Eurostile", sans-serif;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}

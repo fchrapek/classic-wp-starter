@@ -1,0 +1,26 @@
+.site-footer {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: var(--c-primary);
+
+  * {
+    color: var(--c-white);
+  }
+
+  .contact-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    br {
+      display: none;
+    }
+
+    &__item {
+      padding: .4rem;
+    }
+  }
+}
