@@ -4,7 +4,7 @@
   position: relative;
   top: -4rem;
   width: 90%;
-  max-width: var(--width-grid);
+  max-width: 80rem;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: -4rem;
@@ -61,7 +61,7 @@
     place-content: center;
 
     @include up(md) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 

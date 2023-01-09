@@ -40,7 +40,9 @@
 
     &:nth-of-type(1),
     &:nth-of-type(4) {
-      clip-path: polygon(var(--edge-size) 0%, 100% 0, 100% calc(100% - var(--edge-size)), calc(100% - var(--edge-size)) 100%, 0 100%, 0% var(--edge-size));
+      @include up(md) {
+        clip-path: polygon(var(--edge-size) 0%, 100% 0, 100% calc(100% - var(--edge-size)), calc(100% - var(--edge-size)) 100%, 0 100%, 0% var(--edge-size));
+      }
 
       @include up(lg) {
         clip-path: polygon(var(--edge-size-lg) 0%, 100% 0, 100% calc(100% - var(--edge-size-lg)), calc(100% - var(--edge-size-lg)) 100%, 0 100%, 0% var(--edge-size-lg));
@@ -49,7 +51,9 @@
 
     &:nth-of-type(2),
     &:nth-of-type(3) {
-      clip-path: polygon(0 0, calc(100% - var(--edge-size)) 0%, 100% var(--edge-size), 100% 100%, 100% 100%, var(--edge-size) 100%, 0% calc(100% - var(--edge-size)), 0 0);
+      @include up(md) {
+        clip-path: polygon(0 0, calc(100% - var(--edge-size)) 0%, 100% var(--edge-size), 100% 100%, 100% 100%, var(--edge-size) 100%, 0% calc(100% - var(--edge-size)), 0 0);
+      }
 
       @include up(lg) {
         clip-path: polygon(0 0, calc(100% - var(--edge-size-lg)) 0%, 100% var(--edge-size-lg), 100% 100%, 100% 100%, var(--edge-size-lg) 100%, 0% calc(100% - var(--edge-size-lg)), 0 0);
@@ -62,6 +66,11 @@
       img {
         width: 3.2rem;
         height: 3.2rem;
+
+        @include up(lg) {
+          width: 5rem;
+          height: 5rem;
+        }
       }
     }
   }
