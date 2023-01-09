@@ -7,11 +7,11 @@
 
 // Helpers
 @import
-  "helpers/mixins";
+  "helpers/mixins",
+  "helpers/sanitize";
 
 // Variables
 @import
-  "variables/normalize",
   "variables/breakpoints",
   "variables/variables";
 
@@ -47,7 +47,10 @@
 
 // Gutenberg blocks
 @import
-  "blocks/hero",
+  "blocks/big-numbers",
   "blocks/content-image",
   "blocks/contact-form",
-  "blocks/cta";
+  "blocks/cta",
+  "blocks/hero",
+  "blocks/projects",
+  "blocks/services";

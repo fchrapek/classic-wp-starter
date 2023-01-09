@@ -5,7 +5,7 @@ namespace Brandpaka;
 $data = get_field('data');
 ?>
 
-<section class="hero">
+<section class="block hero">
   <div class="hero__container container">
     <div class="hero__content">
       <?php if (! empty($data['content'])) : ?>
@@ -17,15 +17,15 @@ $data = get_field('data');
           href="<?php echo esc_url($btn['url']); ?>"
           target="<?php echo esc_attr($btn['target'] ? $btn['target'] : '_self'); ?>"
           class="hero__button js-trigger button">
-
-          <?php echo esc_html($btn['title']); ?>
+          
+          <?php echo esc_html($btn['title']); ?>            
         </a>
       <?php endif; ?>
     </div>
 
     <?php if (! empty($data['image'])) : ?>
       <figure class="hero__media">
-        <?php echo wp_get_attachment_image($data['image'], 'full', false, ['class' => 'hero__media-img']); ?>
+        <?php echo wp_get_attachment_image($data['image'], 'full', false, []); ?>
       </figure>
     <?php endif; ?>
   </div>

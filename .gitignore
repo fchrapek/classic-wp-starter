@@ -1,10 +1,7 @@
 ### WordPress ###
-# Core
-#
-# /wp-admin/
-# /wp-includes/
 
 # Configuration
+wp-config.php
 wp-config-db.php
 
 # Example themes
@@ -27,7 +24,10 @@ wp-config-db.php
 /wp-content/themes/brandpaka/js/prod
 
 # Example plugin
-/wp-content/plugins/hello.php
+/wp-content/mu-plugins
+/wp-content/plugins/wp-migrate-db-pro
+/wp-content/plugins/wp-migrate-db-pro-media-files
+/wp-content/plugins/wp-migrate-db-pro-theme-plugin-files
 
 # Uploads
 /wp-content/uploads/
@@ -43,16 +43,3 @@ wp-config-db.php
 .DS_Store
 .DS_Store?
 /.well-known
-
-# All plugins
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
-
-# All themes
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
-
-
-# End of https://www.toptal.com/developers/gitignore/api/wordpress

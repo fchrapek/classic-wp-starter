@@ -9,7 +9,7 @@ namespace Brandpaka;
     <?php foreach ($social_media as $item) : ?>
       <li class="social-media__item">
         <?php if (! empty($icon = $item["icon"]) && ! empty($url = $item["url"])) : ?>
-          <a href="<?php echo esc_url($url); ?>" target="_blank" class="social-media__url no-external-link-indicator">
+          <a href="<?php echo esc_url($url); ?>" target="_blank" class="social-media__url">
             <?php echo wp_get_attachment_image($icon["id"], "full", false, ["class" => "social-media__icon", "alt" => $icon["alt"]]); ?>
           </a>
         <?php endif; ?>

@@ -1,143 +1,123 @@
-// @import "../../layout/typography";
+.contact-form {
+  background-color: var(--c-gray-200);
 
-.block-contact-form {
-  // @include up(lg) {
-  //   padding-bottom: 16rem;
-  // }
+  label {
+    display: block;
+    margin-bottom: .4rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: .05rem;
+    text-transform: uppercase;
+  }
 
-  // p,
-  // li,
-  // a,
-  // span,
-  // label {
-  //   color: var(--c-black);
-  // }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    margin-bottom: 1.1rem;
+    padding: 1rem;
+    border: .1rem solid var(--c-gray-300);
 
-  // span,
-  // label {
-  //   display: block;
-  // }
-  .wpcf7-form {
-    align-items: flex-start;
+    @include up(lg) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
 
-    // margin-left: 2.1rem;
+  &__input {
+    margin-bottom: 1rem;
+  }
+
+  .wpcf7-spinner {
+    display: none;
+  }
+
+  .wpcf7-not-valid-tip {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+
+  &__container {
+    display: grid;
 
     @include up(md) {
-      margin: -2rem 0 0 5.5rem;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 4rem;
     }
 
-    // input[type="text"],
-    // input[type="email"],
-    // textarea {
-    //   margin-bottom: 1.1rem;
-    // }
+    @include up(lg) {
+      grid-column-gap: 8rem;
+    }
+  }
 
-    // &__input {
-    //   margin-bottom: 1rem;
-    // }
+  &__heading {
+    grid-column: -1 / 1;
+  }
 
-    // &__label {
-    //   margin-bottom: .4rem;
-    //   font-size: 1.2rem;
-    //   font-weight: 700;
-    //   letter-spacing: .05rem;
-    //   text-transform: uppercase;
-    // }
+  .form {
+    &__field {
+      &.-privacy-info {
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+      }
+    }
+  }
 
-    &__acceptance-wrapper {
-      margin-bottom: 4rem;
+  .contact-info {
+    margin: 0;
+    margin-top: 4rem;
+    padding: 0;
+    list-style-type: none;
 
-      .wpcf7-list-item {
-        margin-left: 0;
+    @include up(md) {
+      margin-top: 0;
+    }
 
-        & > label {
-          display: flex;
-          gap: .8rem;
-          align-items: center;
+    &__item {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 5rem;
+      color: var(--c-black);
+      font-family: "Eurostile", sans-serif;
+      font-size: 2.2rem;
+      line-height: 2.6rem;
 
-          span {
-            font-size: 1rem;
-          }
+      @include up(lg) {
+        padding-left: 5.6rem;
+        font-size: 3rem;
+        line-height: 3.6rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -.9rem;
+        width: 4rem;
+        height: 4rem;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      &.-phone {
+        &::before {
+          background-image: url("../../svg/phone.svg");
+        }
+      }
+
+      &.-email {
+        &::before {
+          background-image: url("../../svg/email.svg");
+        }
+      }
+
+      &.-address {
+        &::before {
+          background-image: url("../../svg/pin.svg");
         }
       }
     }
-
-    // &__submit {
-    //   display: flex;
-    //   justify-content: flex-end;
-
-    //   input[type="submit"] {
-    //     font-family: var(--ff-main);
-    //   }
-    // }
-
-    .form-submit-btn {
-      align-self: flex-end;
-      margin-top: 4rem;
-
-      @include up(md) {
-        margin: -5rem 7.1rem 0 0;
-      }
-    }
-
-    .wpcf7-not-valid-tip {
-      margin-top: .5rem;
-      color: var(--c-alert);
-      font-size: 1.2rem;
-      line-height: 1.6rem;
-      letter-spacing: .05rem;
-    }
   }
-
-  .wpcf7-response-output {
-    display: none !important;
-    margin: 0 !important;
-    padding: 1rem !important;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-    border: .1rem solid var(--c-alert) !important;
-  }
-
-  // .wpcf7-spinner {
-  //   position: absolute;
-  //   left: 0;
-  //   margin: 0;
-
-  //   &::after {
-  //     content: "Wysyłam wiadomość" !important;
-  //     position: absolute;
-  //     left: 3.2rem;
-  //     font-size: 1.2rem;
-  //     line-height: 1.6rem;
-  //   }
-  // }
-
-  // &__map {
-  //   position: relative;
-  //   height: 40rem;
-  //   border-radius: .6rem;
-  //   overflow: hidden;
-
-  //   @include up(md) {
-  //     align-self: flex-end;
-  //     height: 52.75rem;
-  //   }
-
-  //   @include up(lg) {
-  //     height: 54rem;
-  //   }
-
-  //   &-iframe {
-  //     position: absolute;
-  //     left: 0%;
-  //     top: -6rem;
-  //     width: 100%;
-  //     height: 46rem;
-  //     border-radius: .6rem;
-
-  //     @include up(md) {
-  //       height: 60rem;
-  //     }
-  //   }
-  // }
 }

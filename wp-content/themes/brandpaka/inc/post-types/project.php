@@ -37,7 +37,7 @@ class Project extends Post_Type //phpcs:ignore
       'show_in_rest'        => false,
       'rewrite'             => [
         'with_front'  => false,
-        'slug'        => 'your-post-type',
+        'slug'        => '[project]',
       ],
       'supports'            => ['title', 'editor', 'thumbnail', 'revisions'],
       'taxonomies'          => [],

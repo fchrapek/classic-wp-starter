@@ -25,16 +25,6 @@ function acf_blocks_init()
   $example_data = apply_filters('air_acf_blocks_example_data', []);
 
   foreach (THEME_SETTINGS['acf_blocks'] as $block) {
-    // Check if we have added example data via hook
-    if (empty($block['example']) && ! empty($example_data[ $block['name'] ])) {
-      $block['example'] = [
-        'attributes' => [
-          'mode' => 'preview',
-          'data' => $example_data[ $block['name'] ],
-        ],
-      ];
-    }
-
     // Check if icon is set, otherwise try to load svg icon
     if (! isset($block['icon']) || empty($block['icon'])) {
       $icon_path = get_theme_file_path("svg/block-icons/{$block['name']}.svg");

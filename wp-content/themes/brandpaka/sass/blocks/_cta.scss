@@ -1,14 +1,7 @@
 @import "../layout/typography";
 
 .cta {
-  padding-top: 3.2rem;
-  padding-bottom: 3.2rem;
-  background-color: var(--c-gray-600);
-
-  @include up(md) {
-    padding-top: 6.4rem;
-    padding-bottom: 6.4rem;
-  }
+  background-color: var(--c-primary);
 
   &__content {
     margin-bottom: 2.4rem;
@@ -17,7 +10,9 @@
     h2,
     p,
     a {
-      @extend %h1;
+      @extend %h2;
+      color: var(--c-white);
+      font-family: "Eurostile", sans-serif;
       font-weight: 700;
       text-align: center;
     }
@@ -25,7 +20,5 @@
 
   &__button {
     margin: 0 auto;
-    color: var(--c-black);
-    background-color: var(--c-white);
   }
 }

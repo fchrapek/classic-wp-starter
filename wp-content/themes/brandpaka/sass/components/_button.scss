@@ -1,8 +1,12 @@
 .button {
+  --edge-size: 1.6rem;
+  --edge-size-lg: 2.4rem;
+
   display: block;
   width: auto;
   max-width: max-content;
-  padding: 1.2rem 2.4rem 1.1rem;
+  padding: 1.2rem 3.6rem 1.1rem;
+  clip-path: polygon(var(--edge-size) 0%, 100% 0, 100% calc(100% - var(--edge-size)), calc(100% - var(--edge-size)) 100%, 0 100%, 0% var(--edge-size));
   color: var(--c-white);
   font-family: var(--ff-main);
   font-size: 1.4rem;
@@ -10,13 +14,18 @@
   text-align: center;
   text-decoration: none;
   appearance: none;
-  background-color: var(--c-gray-600);
-  border: .1rem solid var(--c-gray-600);
+  background-color: var(--c-primary);
+  border: .1rem solid var(--c-primary);
   cursor: pointer;
-  overflow: hidden;
 
-  @include up(md) {
-    padding-left: 4rem;
-    padding-right: 4rem;
+  @include up(lg) {
+    padding: 1.8rem 4.6rem 1.7rem;
+    clip-path: polygon(var(--edge-size-lg) 0%, 100% 0, 100% calc(100% - var(--edge-size-lg)), calc(100% - var(--edge-size-lg)) 100%, 0 100%, 0% var(--edge-size-lg));
+    font-size: 1.8rem;
+  }
+
+  &.-secondary {
+    color: var(--c-black);
+    background-color: var(--c-white);
   }
 }

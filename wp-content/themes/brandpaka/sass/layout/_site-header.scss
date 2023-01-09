@@ -1,8 +1,20 @@
 .site-header {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  background-color: var(--c-primary);
+  z-index: 999;
+
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--pad-x);
+    padding: 1rem var(--pad-x);
+  }
+
+  &__branding {
+    * {
+      color: var(--c-white);
+    }
   }
 }

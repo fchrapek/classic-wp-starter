@@ -5,7 +5,7 @@ namespace Brandpaka;
 $data = get_field('data');
 ?>
 
-<section class="cta">
+<section class="block cta">
   <div class="cta__container container">
     <?php if (! empty($data['content'])) : ?>
       <div class="cta__content">
@@ -17,9 +17,9 @@ $data = get_field('data');
       <a
         href="<?php echo esc_url($btn['url']); ?>"
         target="<?php echo esc_attr($btn['target'] ? $btn['target'] : '_self'); ?>"
-        class="cta__button js-trigger button">
+        class="cta__button js-trigger button -secondary">
 
-        <?php echo esc_html($btn['title']); ?>
+        <?php echo esc_html($btn['title']); ?>            
       </a>
     <?php endif; ?>
   </div>

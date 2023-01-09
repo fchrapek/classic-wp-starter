@@ -6,6 +6,7 @@
             "key": "field_63617f86bf283",
             "label": "Block: Contact Form",
             "name": "",
+            "aria-label": "",
             "type": "accordion",
             "instructions": "",
             "required": 0,
@@ -23,6 +24,7 @@
             "key": "field_62cdced6b3682",
             "label": "Block: Data",
             "name": "data",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -36,8 +38,9 @@
             "sub_fields": [
                 {
                     "key": "field_62cdced6b42bc",
-                    "label": "Header",
+                    "label": "Contact Form: Header",
                     "name": "header",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -48,15 +51,16 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "append": ""
                 },
                 {
                     "key": "field_62cdced6b42c3",
-                    "label": "Form",
+                    "label": "Contact Form: Form",
                     "name": "form",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -67,10 +71,30 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "append": ""
+                },
+                {
+                    "key": "field_6390ef4a7ca17",
+                    "label": "Contact Form: Content",
+                    "name": "content",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": ""
                 }
             ]
         }
@@ -93,5 +117,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1667334051
+    "modified": 1670442847
 }

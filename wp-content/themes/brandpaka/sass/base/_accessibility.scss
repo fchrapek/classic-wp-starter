@@ -81,36 +81,6 @@
   }
 }
 
-// Add icon to external links
-// a.is-external-link {
-//   display: inline-flex;
-//   align-items: center;
-//   justify-content: space-between;
-
-//   &::after {
-//     content: "";
-//     position: relative;
-//     right: 0;
-//     top: 0;
-//     display: inline-flex;
-//     width: 14px;
-//     height: 14px;
-//     margin-left: 5px;
-//     margin-right: 2px;
-//     background-image: url("../../svg/external-link.svg");
-//     background-position: right center;
-//     background-repeat: no-repeat;
-//     background-size: 14px 14px;
-//     transition: all .18s ease-in-out;
-//   }
-// }
-
-// Do not use external links indicators in decorative areas
-// stylelint-disable-next-line a11y/no-display-none
-a.is-external-link.global-link::after,
-a.is-external-link.no-external-link-indicator::after {
-  display: none;
-}
 
 // Make focus a little more engaging
 // @source https://twitter.com/argyleink/status/1387072095159406596
